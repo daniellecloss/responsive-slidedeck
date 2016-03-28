@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Tips for RWD | DanielleCloss</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/main.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="intro" data-background="/images/responsive-design.png" data-background-size="90%">
+					<h1>RWD</h1>
+					<h3>7 Tips for Creating Responsive Web Designs!</h3>
+					<br>
+					<small>Created by <a href="http://www.daniellecloss.com">Danielle Closs</a> / <a href="http://twitter.com/danielle">@daniellecloss</a></small>
+					<br>
+					<img src="images/logo.svg" width="150px"/>
+				</section>
+
+				<section>
+					<h2>What is RWD?</h2>
+					<br>
+					<h5>RWD defined, from Nielson Norman Group:</h5>
+					<blockquote cite="https://www.nngroup.com/articles/responsive-web-design-definition/">
+						&ldquo;Responsive design teams create a single site to support many devices, but need to consider content, design and performance across devices to ensure usability.&rdquo;
+					</blockquote>
+				</section>
+
+				<section class="intro" data-background="/images/check-mark-8-xxl.png" data-background-position="right" data-background-size="60%">
+					<h2>7 Tips for RWD</h2>
+					<ol>
+						<li>Use SVG</li>
+						<li>Use Web Fonts</li>
+						<li>Use Percentages</li>
+						<li>Conditional Image Loading</li>
+						<li>Use RESS</li>
+						<li>HTML Prototypes</li>
+						<li>Component Design and Dev</li>
+					</ol>
+				</section>
+
+				<section data-background="/images/SVG_Simple_Logo.svg" data-background-position="right" data-background-size="85%">
+					<h2>1. Use SVG</h2>
+					<p>Advantages:</p>
+					<ul>
+						<li>Resolution independent</li>
+						<li>Resize and recolor (on the fly!)</li>
+						<li>BONUS: clean animation</li>
+					</ul>
+					<p>Tools:</p>
+					<ul>
+						<li>Use Adobe Illustrator and export</li>
+						<li>Use Inkscape and export</li>
+					</ul>
+					<br>
+					<small>For smaller single/dual colored icons, consider an icon font instead.</small>
+				</section>
+
+				<section data-background="/images/glyphicons-halflings.png" data-background-position="right" data-background-size="65%">
+					<h2>2. Use Web Fonts</h2>
+					<p>Advantages:</p>
+					<ul>
+						<li>Custom fonts that resize with your design</li>
+						<li>Unify your design</li>
+						<li>Maintain your brand style</li>
+					</ul>
+					<p>Examples:</p>
+					<ul>
+						<li>Google Fonts</li>
+						<li>Font Squirrel</li>
+						<li>Fonts.com</li>
+					</ul>
+					<br>
+					<small>Don't use too many, you will take a performance hit and clutter your design!</small>
+				</section>
+
+				<section data-background="/images/percentage-icon-22992.png" data-background-position="right" data-background-size="50%">
+					<h2>3. Use Percentages</h2>
+					<p>Advantages:</p>
+					<ul>
+						<li>Resize elements to fit in your site</li>
+						<li>More consistency across your design</li>
+						<li>Less breakage across your design</li>
+						<li>Consider using FlexBox if you aren't supporing IE11 or earlier (Lucky you!)</li>
+					</ul>
+					<br>
+					<small>Make sure to update your padding and margins to percentages too!</small>
+				</section>
+
+				<section data-background="/images/camera.png" data-background-position="right" data-background-size="50%">
+					<h2>4. Conditional Image Loading</h2>
+					<p>Advantages:</p>
+					<ul>
+						<li>Page load performance boost</li>
+						<li>Fewer resources loading to smaller devices</li>
+					</ul>
+					<p>Examples:</p>
+					<ul>
+						<li>PictureFill.js (polyfill)</li>
+						<li>HTML5 picture element (browser dependent)</li>
+					</ul>
+					<br>
+					<small>Don't use display:none to hide on different devices, and save a user's bandwidth today!</small>
+				</section>
+
+				<section data-background="/images/server-512.png" data-background-position="right" data-background-size="50%">
+					<h2>5. Use RESS</h2>
+					<h5>Responsive Web Design + Server Side Components</h5>
+					<p>Advantages:</p>
+					<ul>
+						<li>Only load resources (css, js) you need</li>
+						<li>Client and server technologies determine resources</li>
+					</ul>
+					<p>Examples:</p>
+					<ul>
+						<li>Server side device detection</li>
+						<li>Use a service for feature detection (netbiscuits.com or mobiledetect.net)</li>
+					</ul>
+				</section>
+
+				<section data-background="/images/html51.png" data-background-position="right" data-background-size="50%">
+					<h2>6. HTML Prototypes</h2>
+					<p>Advantages:</p>
+					<ul>
+						<li>"Try out" design and development techniques</li>
+						<li>Spot problems early and quickly</li>
+						<li>BONUS: great tool to communicate complex concepts to clients!</li>
+					</ul>
+					<p>Examples:</p>
+					<ul>
+						<li>Build "by hand"</li>
+						<li>Or, use a tool, like Adobe XD</li>
+					</ul>
+				</section>
+
+				<section data-background="/images/icon_62495.png" data-background-position="right" data-background-size="60%">
+					<h2>7. Component Design and Dev</h2>
+					<p>Advantages:</p>
+					<ul>
+						<li>Flexible components for a flexible site</li>
+						<li>Retain consistency in your design</li>
+						<li>Easy to rearrange/rebuild (Lego approach)</li>
+					</ul>
+					<p>Examples:</p>
+					<ul>
+						<li>OO (object-oriented) development</li>
+						<li>Style Tiles</li>
+						<li>Atomic Design</li>
+					</ul>
+				</section>
+
+				<section class="end" data-background="/images/8800.png" data-background-size="45%">
+					<h2>Find me here!</h2>
+					<br>
+					<p><a href="http://www.daniellecloss.com">www.daniellecloss.com</a></p>
+					<p><a href="http://twitter.com/danielle">@daniellecloss</a></p>
+					<p><a href="https://github.com/daniellecloss">github.com/daniellecloss</a></p>
+					<br>
+					<img src="images/logo.svg" width="150px"/>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
